@@ -1,6 +1,13 @@
 name: MaterialFiles with Sora-Editor
 
-on: [workflow_dispatch, push]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+          - Sora-Editor
+    tags:
+  pull_request:
+  merge_group:
 
 jobs:
   build:
