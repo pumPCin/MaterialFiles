@@ -79,7 +79,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
 //#ifdef NONFREE
             firebaseCrashlytics {
                 nativeSymbolUploadEnabled true
