@@ -22,6 +22,7 @@ target_compile_options(hiddenapi
         -Werror)
 
 find_library(LOG_LIBRARY log)
+
 add_library(syscall SHARED
         src/main/jni/syscall.c)
 target_compile_options(syscall
