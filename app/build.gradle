@@ -7,24 +7,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
-//#ifdef NONFREE
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.google.gms:google-services:4.4.2'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.3'
-    }
-}
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
-//#endif
-
 android {
     namespace 'me.zhanghai.android.files'
-    buildToolsVersion = '35.0.0'
+    buildToolsVersion = '35'
     compileSdk 35
     ndkVersion '27.2.12479018'
     defaultConfig {
@@ -77,11 +62,6 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//#ifdef NONFREE
-            firebaseCrashlytics {
-                nativeSymbolUploadEnabled true
-            }
-//#endif
         }
     }
     packagingOptions {
@@ -203,12 +183,6 @@ dependencies {
     implementation 'org.apache.mina:mina-core:2.2.4'
     // Also a dependency of jCIFS-NG.
     implementation 'org.slf4j:slf4j-android:1.7.36'
-
-//#ifdef NONFREE
-    implementation platform('com.google.firebase:firebase-bom:33.9.0')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-crashlytics-ndk'
-//#endif
 
     // https://github.com/Rosemoe/sora-editor
     // Better text editor
