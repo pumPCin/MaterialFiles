@@ -317,6 +317,7 @@
 
         <activity
             android:name="me.zhanghai.android.files.viewer.text.TextEditorActivity"
+            android:configChanges="uiMode|orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:label="@string/text_editor_title"
             android:theme="@style/Theme.MaterialFiles">
@@ -391,9 +392,5 @@
         <receiver android:name="me.zhanghai.android.files.filejob.FileJobReceiver" />
 
         <receiver android:name="me.zhanghai.android.files.ftpserver.FtpServerReceiver" />
-
-        <meta-data
-            android:name="firebase_crashlytics_collection_enabled"
-            android:value="false" />
     </application>
 </manifest>
