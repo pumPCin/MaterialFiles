@@ -3,9 +3,7 @@ name: Android CI
 on:
   workflow_dispatch:
   push:
-    branches:
-          - main
-          - test
+    branches: master
     tags:
   pull_request:
   merge_group:
