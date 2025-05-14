@@ -3,8 +3,7 @@ name: MaterialFiles with Sora-Editor
 on:
   workflow_dispatch:
   push:
-    branches:
-          - Sora-Editor
+    branches: Sora-Editor
     tags:
   pull_request:
   merge_group:
