@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: Accept licenses
-    - uses: SimonMarquis/android-accept-licenses@v1
+      uses: SimonMarquis/android-accept-licenses@v1
 
     - name: Check out repository
       uses: actions/checkout@v4
