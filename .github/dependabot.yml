@@ -9,7 +9,6 @@ updates:
         patterns:
           - "*"
     ignore:
-      - dependency-name:
-          - "com.hierynomus:smbj"
-          - "com.rapid7.client:dcerpc"
-          - "de.psdev.licensesdialog:licensesdialog"
+      - dependency-name: "com.hierynomus:smbj"
+      - dependency-name: "com.rapid7.client:dcerpc"
+      - dependency-name: "de.psdev.licensesdialog:licensesdialog"
