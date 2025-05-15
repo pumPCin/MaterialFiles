@@ -139,7 +139,7 @@ dependencies {
     }
     def bouncy_castle_version = '1.80'
     implementation "org.bouncycastle:bcprov-jdk15to18:$bouncy_castle_version"
-    implementation ('com.hierynomus:sshj:0.39.0') {
+    implementation ('com.hierynomus:sshj:0.40.0') {
         exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
         exclude group: 'org.bouncycastle', module: 'bcpkix-jdk18on'
     }
