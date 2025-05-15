@@ -8,3 +8,8 @@ updates:
       maven:
         patterns:
           - "*"
+    ignore:
+      - dependency-name:
+          - "com.hierynomus:smbj"
+          - "com.rapid7.client:dcerpc"
+          - "de.psdev.licensesdialog:licensesdialog"
