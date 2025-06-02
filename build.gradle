@@ -14,7 +14,6 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // https://issuetracker.google.com/issues/349872492
         classpath 'com.android.tools.build:gradle:8.10.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
@@ -27,6 +26,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        jcenter()
     }
 }
 
