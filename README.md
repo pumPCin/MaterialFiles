@@ -67,7 +67,7 @@ Thank you if you choose to include Material Files in your custom ROM! However si
 
 ## License
 
-    Copyright (C) 2018 Hai Zhang
+    Copyright (C) 2024 Hai Zhang
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

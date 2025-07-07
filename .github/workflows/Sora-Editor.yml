@@ -51,7 +51,7 @@ jobs:
 
     - name: Rename artifact
       working-directory: app/build/outputs/apk/release/
-      run: mv *.apk MaterialFiles.Sora-Editor-${{steps.get_tag.outputs.tag}}@${{steps.get_tag.outputs.Short_SHA}}.apk
+      run: mv *.apk MaterialFiles_${{steps.get_tag.outputs.tag}}@${{steps.get_tag.outputs.Short_SHA}}.apk
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
