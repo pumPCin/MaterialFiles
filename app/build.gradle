@@ -114,7 +114,7 @@ dependencies {
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
     implementation 'androidx.exifinterface:exifinterface:1.4.1'
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
-    def androidx_lifecycle_version = '2.9.2'
+    def androidx_lifecycle_version = '2.9.3'
     implementation "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-process:$androidx_lifecycle_version"
