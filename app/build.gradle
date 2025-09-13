@@ -89,7 +89,7 @@ repositories {
 }
 dependencies {
     // We need https://github.com/bitfireAT/dav4jvm/commit/c1bc14348831bcdb00f3a6eec4859b81c7dc3728
-    implementation('com.github.bitfireAT:dav4jvm:37c2bde') {
+    implementation('com.github.bitfireAT:dav4jvm:02fe1a9') {
         exclude group: 'org.ogce', module: 'xpp3'
     }
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
@@ -107,7 +107,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
 
-    implementation 'androidx.activity:activity-ktx:1.10.1'
+    implementation 'androidx.activity:activity-ktx:1.11.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.core:core-ktx:1.17.0'
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
