@@ -90,7 +90,7 @@ repositories {
     }
 }
 dependencies {
-    implementation('com.github.bitfireAT:dav4jvm:e22831f') {
+    implementation('com.github.bitfireAT:dav4jvm:02fe1a9') {
         exclude group: 'org.ogce', module: 'xpp3'
     }
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
