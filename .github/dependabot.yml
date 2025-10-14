@@ -12,3 +12,4 @@ updates:
       - dependency-name: "com.hierynomus:smbj"
       - dependency-name: "com.rapid7.client:dcerpc"
       - dependency-name: "de.psdev.licensesdialog:licensesdialog"
+      - dependency-name: "com.google.android.material:material"
