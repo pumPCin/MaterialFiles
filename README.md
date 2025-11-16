@@ -1,10 +1,11 @@
 # Material Files
 
-[本文中文版](README_zh-CN.md)
+[![Android CI 状态](https://img.shields.io/github/actions/workflow/status/Citrinae-Lime/MaterialFiles.Sora-Editor/android.yml?style=for-the-badge&label=%E5%8E%9F%E7%89%88%20%E7%8A%B6%E6%80%81)](https://github.com/Citrinae-Lime/MaterialFiles.Sora-Editor/actions/workflows/android.yml)
+[![Sora-Editor版 状态](https://img.shields.io/github/actions/workflow/status/Citrinae-Lime/MaterialFiles.Sora-Editor/Sora-Editor.yml?style=for-the-badge&label=Sora-Editor%E7%89%88%20%E7%8A%B6%E6%80%81)](https://github.com/Citrinae-Lime/MaterialFiles.Sora-Editor/actions/workflows/Sora-Editor.yml)
+[![GitHub 发行版](https://img.shields.io/github/v/release/Citrinae-Lime/MaterialFiles.Sora-Editor?include_prereleases&display_name=release&style=for-the-badge)](https://github.com/Citrinae-Lime/MaterialFiles.Sora-Editor/releases)
+[![许可证](https://img.shields.io/github/license/zhanghai/MaterialFiles?color=blue&style=for-the-badge)](LICENSE)
 
-[![Android CI status](https://github.com/zhanghai/MaterialFiles/workflows/Android%20CI/badge.svg)](https://github.com/zhanghai/MaterialFiles/actions) [![GitHub release](https://img.shields.io/github/v/release/zhanghai/MaterialFiles)](https://github.com/zhanghai/MaterialFiles/releases) [![License](https://img.shields.io/github/license/zhanghai/MaterialFiles?color=blue)](LICENSE)
-
-An open source Material Design file manager, for Android 5.0+.
+An open source Material Design file manager, for Android 8.0+.
 
 [<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="240">](https://play.google.com/store/apps/details?id=me.zhanghai.android.files) [<img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="240">](https://f-droid.org/packages/me.zhanghai.android.files) [<img alt="Get it on GitHub" src="https://raw.githubusercontent.com/Kunzisoft/Github-badge/main/get-it-on-github.png" width="240">](https://github.com/zhanghai/MaterialFiles/releases/latest/download/app-release-universal.apk)
 
@@ -66,7 +67,7 @@ Thank you if you choose to include Material Files in your custom ROM! However si
 
 ## License
 
-    Copyright (C) 2018 Hai Zhang
+    Copyright (C) 2024 Hai Zhang
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
