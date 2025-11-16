@@ -1,0 +1,63 @@
+name: MaterialFiles with Sora-Editor
+
+on:
+  workflow_dispatch:
+  push:
+    branches: Sora-Editor
+    tags:
+  pull_request:
+  merge_group:
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Accept licenses
+      uses: SimonMarquis/android-accept-licenses@v1
+
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        show-progress: false
+
+    - name: Get "latest" tag and short SHA
+      id: get_tag
+      run: |
+        tag=`curl -s 'https://api.github.com/repos/zhanghai/MaterialFiles/tags?per_page=1' | grep -Po '"name": "\K[^"]+'` && echo "tag=$tag" >> $GITHUB_OUTPUT
+        echo Short_SHA=$(git rev-parse --short "$GITHUB_SHA") >> $GITHUB_OUTPUT
+
+    - name: Delete Non-Free Code
+      run: |
+        rm -rf app/src/main/java/me/zhanghai/android/files/nonfree
+        find -type f -exec sed -i '/\/\/#ifdef NONFREE/,/\/\/#endif/d' {} +
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: current
+
+    - name: Build with Gradle
+      run: gradle assembleRelease --parallel
+
+    - name: Rename artifact
+      working-directory: app/build/outputs/apk/release/
+      run: mv *.apk MaterialFiles_${{steps.get_tag.outputs.tag}}@${{steps.get_tag.outputs.Short_SHA}}.apk
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: MaterialFiles-release ${{steps.get_tag.outputs.tag}}@${{steps.get_tag.outputs.Short_SHA}}
+        path: app/build/outputs/apk/release/
+        retention-days: 28
+
+    #Todo: Upload to release
