@@ -11,7 +11,6 @@ import java8.nio.file.Path
 import java8.nio.file.StandardWatchEventKinds
 import java8.nio.file.WatchEvent
 import java8.nio.file.attribute.BasicFileAttributes
-import me.zhanghai.android.files.BuildConfig
 import me.zhanghai.android.files.provider.FileSystemProviders
 import java.io.IOException
 import java.io.InterruptedIOException
@@ -176,15 +175,6 @@ class PollingWatchService : AbstractWatchService<PollingWatchKey>() {
                 } else {
                     this[path] = path.readAttributes(
                         BasicFileAttributes::class.java, LinkOption.NOFOLLOW_LINKS
-                    )
-                }
-            }.also {
-                if (BuildConfig.DEBUG) {
-                    // Ensure that the attributes class has overridden equals().
-                    val attributes = it.values.firstOrNull() ?: return@also
-                    check(
-                        attributes::class.java.getMethod("equals", Object::class.java)
-                            != Object::class.java.getMethod("equals", Object::class.java)
                     )
                 }
             }
