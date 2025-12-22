@@ -1,6 +1,12 @@
 name: Android CI
 
-on: [push]
+on:
+  workflow_dispatch:
+  push:
+    tags:
+  pull_request:
+  merge_group:
+
 
 jobs:
   build:
@@ -9,14 +15,14 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         submodules: true
-    - name: Set up JDK 17
+    - name: Set up JDK
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '21'
+        java-version: '25'
     - name: Build with Gradle
       run: ./gradlew assembleDebug lintVitalRelease
     - name: Upload artifact
