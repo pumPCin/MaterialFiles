@@ -4,7 +4,6 @@
  */
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
 apply from: '../signing.gradle'
@@ -36,6 +35,7 @@ android {
         aidl true
         buildConfig true
         viewBinding true
+        resValues true
     }
     androidResources {
         generateLocaleConfig true
@@ -45,8 +45,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_21
         targetCompatibility JavaVersion.VERSION_21
     }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_21.toString()
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
+        }
     }
     externalNativeBuild {
         cmake {
