@@ -89,7 +89,7 @@ object SuiFileServiceLauncher {
                                 val serviceArgs = Shizuku.UserServiceArgs(
                                     ComponentName(application, SuiFileServiceInterface::class.java)
                                 )
-                                    .debuggable(BuildConfig.DEBUG)
+                                    .debuggable(false)
                                     .daemon(false)
                                     .processNameSuffix("sui")
                                     .version(BuildConfig.VERSION_CODE)
