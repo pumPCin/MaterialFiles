@@ -9,7 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ImpliedQuantity">
 
-    <string name="app_name">Material Файлы</string>
+    <string name="app_name">Мои Файлы</string>
 
     <string name="close">Закрыть</string>
     <string name="copy">Копировать</string>
@@ -41,6 +41,7 @@
     <string name="search">Поиск</string>
     <string name="select">Выбрать</string>
     <string name="select_all">Выбрать всё</string>
+    <string name="select_range">Выбрать диапазон</string>
     <string name="share">Поделиться</string>
     <string name="show">Показать</string>
     <string name="skip">Пропустить</string>
@@ -56,8 +57,6 @@
 
     <plurals name="size_in_bytes_format">
         <item quantity="one">%1$,d байт</item>
-        <item quantity="few">%1$,d байт</item>
-        <item quantity="many">%1$,d байт</item>
         <item quantity="other">%1$,d байт</item>
     </plurals>
 
@@ -82,134 +81,94 @@
 
     <plurals name="file_job_archive_scan_notification_title_format">
         <item quantity="one">Подготовка к сжатию %1$,d файла (%2$s)</item>
-        <item quantity="few">Подготовка к сжатию %1$,d файлов (%2$s)</item>
-        <item quantity="many">Подготовка к сжатию %1$,d файлов (%2$s)</item>
         <item quantity="other">Подготовка к сжатию %1$,d файлов (%2$s)</item>
     </plurals>
     <string name="file_job_archive_notification_title_one_format">Сжатие “%1$s” в “%2$s”</string>
     <plurals name="file_job_archive_notification_title_multiple_format">
         <item quantity="one">Сжатие %1$,d файла в “%2$s”</item>
-        <item quantity="few">Сжатие %1$,d файлов в “%2$s”</item>
-        <item quantity="many">Сжатие %1$,d файлов в “%2$s”</item>
         <item quantity="other">Сжатие %1$,d файлов в “%2$s”</item>
     </plurals>
     <plurals name="file_job_copy_scan_notification_title_format">
         <item quantity="one">Подготовка к копированию %1$,d файла (%2$s)</item>
-        <item quantity="few">Подготовка к копированию %1$,d файлов (%2$s)</item>
-        <item quantity="many">Подготовка к копированию %1$,d файлов (%2$s)</item>
         <item quantity="other">Подготовка к копированию %1$,d файлов (%2$s)</item>
     </plurals>
     <string name="file_job_copy_notification_title_one_format">Копирование “%1$s” в “%2$s”</string>
     <plurals name="file_job_copy_notification_title_multiple_format">
         <item quantity="one">Копирование %1$,d файла в “%2$s”</item>
-        <item quantity="few">Копирование %1$,d файлов в “%2$s”</item>
-        <item quantity="many">Копирование %1$,d файлов в “%2$s”</item>
         <item quantity="other">Копирование %1$,d файлов в “%2$s”</item>
     </plurals>
     <plurals name="file_job_extract_scan_notification_title_format">
         <item quantity="one">Подготовка к извлечению %1$,d файла (%2$s)</item>
-        <item quantity="few">Подготовка к извлечению %1$,d файлов (%2$s)</item>
-        <item quantity="many">Подготовка к извлечению %1$,d файлов (%2$s)</item>
         <item quantity="other">Подготовка к извлечению %1$,d файлов (%2$s)</item>
     </plurals>
     <string name="file_job_extract_notification_title_one_format">Извлечение “%1$s” в “%2$s”</string>
     <plurals name="file_job_extract_notification_title_multiple_format">
         <item quantity="one">Извлечение %1$,d файла в “%2$s”</item>
-        <item quantity="few">Извлечение %1$,d файлов в “%2$s”</item>
-        <item quantity="many">Извлечение %1$,d файлов в “%2$s”</item>
         <item quantity="other">Извлечение %1$,d файлов в “%2$s”</item>
     </plurals>
     <plurals name="file_job_move_scan_notification_title_format">
         <item quantity="one">Подготовка к перемещению %1$,d файла (%2$s)</item>
-        <item quantity="few">Подготовка к перемещению %1$,d файлов (%2$s)</item>
-        <item quantity="many">Подготовка к перемещению %1$,d файлов (%2$s)</item>
         <item quantity="other">Подготовка к перемещению %1$,d файлов (%2$s)</item>
     </plurals>
     <string name="file_job_move_notification_title_one_format">Перемещение “%1$s” в “%2$s”</string>
     <plurals name="file_job_move_notification_title_multiple_format">
         <item quantity="one">Перемещение %1$,d файла в “%2$s”</item>
-        <item quantity="few">Перемещение %1$,d файлов в “%2$s”</item>
-        <item quantity="many">Перемещение %1$,d файлов в “%2$s”</item>
         <item quantity="other">Перемещение %1$,d файлов в “%2$s”</item>
     </plurals>
     <string name="file_job_transfer_size_notification_text_one_format">%1$s / %2$s</string>
     <string name="file_job_transfer_size_notification_text_multiple_format">%1$,d / %2$,d</string>
     <plurals name="file_job_delete_scan_notification_title_format">
         <item quantity="one">Подготовка к удалению %1$,d файла</item>
-        <item quantity="few">Подготовка к удалению %1$,d файлов</item>
-        <item quantity="many">Подготовка к удалению %1$,d файлов</item>
         <item quantity="other">Подготовка к удалению %1$,d файлов</item>
     </plurals>
     <string name="file_job_delete_notification_title_one_format">Удаление “%1$s”</string>
     <plurals name="file_job_delete_notification_title_multiple_format">
         <item quantity="one">Удаление %1$,d файла</item>
-        <item quantity="few">Удаление %1$,d файлов</item>
-        <item quantity="many">Удаление %1$,d файлов</item>
         <item quantity="other">Удаление %1$,d файлов</item>
     </plurals>
     <plurals name="file_job_set_owner_scan_notification_title_format">
         <item quantity="one">Подготовка к смене владельца для %1$,d файла</item>
-        <item quantity="few">Подготовка к смене владельца для %1$,d файлов</item>
-        <item quantity="many">Подготовка к смене владельца для %1$,d файлов</item>
         <item quantity="other">Подготовка к смене владельца для %1$,d файлов</item>
     </plurals>
     <string name="file_job_set_owner_notification_title_one_format">Смена владельца для “%1$s”</string>
     <plurals name="file_job_set_owner_notification_title_multiple_format">
         <item quantity="one">Смена владельца для %1$,d файла</item>
-        <item quantity="few">Смена владельца для %1$,d файлов</item>
-        <item quantity="many">Смена владельца для %1$,d файлов</item>
         <item quantity="other">Смена владельца для %1$,d файлов</item>
     </plurals>
     <plurals name="file_job_set_group_scan_notification_title_format">
         <item quantity="one">Подготовка к смене группы для %1$,d файла</item>
-        <item quantity="few">Подготовка к смене группы для %1$,d файлов</item>
-        <item quantity="many">Подготовка к смене группы для %1$,d файлов</item>
         <item quantity="other">Подготовка к смене группы для %1$,d файлов</item>
     </plurals>
     <string name="file_job_set_group_notification_title_one_format">Смена группы для “%1$s”</string>
     <plurals name="file_job_set_group_notification_title_multiple_format">
         <item quantity="one">Смена группы для %1$,d файла</item>
-        <item quantity="few">Смена группы для %1$,d файлов</item>
-        <item quantity="many">Смена группы для %1$,d файлов</item>
         <item quantity="other">Смена группы для %1$,d файлов</item>
     </plurals>
     <plurals name="file_job_set_mode_scan_notification_title_format">
         <item quantity="one">Подготовка к изменению прав доступа для %1$,d файла</item>
-        <item quantity="few">Подготовка к изменению прав доступа для %1$,d файлов</item>
-        <item quantity="many">Подготовка к изменению прав доступа для %1$,d файлов</item>
         <item quantity="other">Подготовка к изменению прав доступа для %1$,d файлов</item>
     </plurals>
     <string name="file_job_set_mode_notification_title_one_format">Изменение прав доступа для “%1$s”</string>
     <plurals name="file_job_set_mode_notification_title_multiple_format">
         <item quantity="one">Изменение прав доступа для %1$,d файла</item>
-        <item quantity="few">Изменение прав доступа для %1$,d файлов</item>
-        <item quantity="many">Изменение прав доступа для %1$,d файлов</item>
         <item quantity="other">Изменение прав доступа для %1$,d файлов</item>
     </plurals>
     <plurals name="file_job_set_selinux_context_scan_notification_title_format">
         <item quantity="one">Подготовка к изменению контекста SELinux для %1$,d файла</item>
-        <item quantity="few">Подготовка к изменению контекста SELinux для %1$,d файлов</item>
-        <item quantity="many">Подготовка к изменению контекста SELinux для %1$,d файлов</item>
         <item quantity="other">Подготовка к изменению контекста SELinux для %1$,d файлов</item>
     </plurals>
     <string name="file_job_set_selinux_context_notification_title_one_format">Изменение контекста SELinux для “%1$s”</string>
     <plurals name="file_job_set_selinux_context_notification_title_multiple_format">
         <item quantity="one">Изменение контекста SELinux для %1$,d файла</item>
-        <item quantity="few">Изменение контекста SELinux для %1$,d файлов</item>
-        <item quantity="many">Изменение контекста SELinux для %1$,d файлов</item>
         <item quantity="other">Изменение контекста SELinux для %1$,d файлов</item>
     </plurals>
     <plurals name="file_job_restore_selinux_context_scan_notification_title_format">
         <item quantity="one">Подготовка к восстановлению контекста SELinux для %1$,d файла</item>
-        <item quantity="few">Подготовка к восстановлению контекста SELinux для %1$,d файлов</item>
-        <item quantity="many">Подготовка к восстановлению контекста SELinux для %1$,d файлов</item>
         <item quantity="other">Подготовка к восстановлению контекста SELinux для %1$,d файлов</item>
     </plurals>
     <string name="file_job_restore_selinux_context_notification_title_one_format">Восстановление контекста SELinux для “%1$s”</string>
     <plurals name="file_job_restore_selinux_context_notification_title_multiple_format">
         <item quantity="one">Восстановление контекста SELinux для %1$,d файла</item>
-        <item quantity="few">Восстановление контекста SELinux для %1$,d файлов</item>
-        <item quantity="many">Восстановление контекста SELinux для %1$,d файлов</item>
         <item quantity="other">Восстановление контекста SELinux для %1$,d файлов</item>
     </plurals>
     <string name="file_job_transfer_count_notification_text_multiple_format">%1$,d / %2$,d</string>
@@ -288,19 +247,16 @@
     <plurals name="file_delete_message_multiple_files_format">
         <item quantity="one">Удалить %1$,d файл?</item>
         <item quantity="few">Удалить %1$,d файла?</item>
-        <item quantity="many">Удалить %1$,d файлов?</item>
         <item quantity="other">Удалить %1$,d файлов?</item>
     </plurals>
     <plurals name="file_delete_message_multiple_directories_format">
         <item quantity="one">Удалить %1$,d папку и её содержимое?</item>
         <item quantity="few">Удалить %1$,d папки и их содержимое?</item>
-        <item quantity="many">Удалить %1$,d папок и их содержимое?</item>
         <item quantity="other">Удалить %1$,d папок и их содержимое?</item>
     </plurals>
     <plurals name="file_delete_message_multiple_mixed_format">
         <item quantity="one">Удалить %1$,d элемент?</item>
         <item quantity="few">Удалить %1$,d элемента?</item>
-        <item quantity="many">Удалить %1$,d элементов?</item>
         <item quantity="other">Удалить %1$,d элементов?</item>
     </plurals>
     <string name="file_create_archive_title">Создать архив</string>
@@ -315,27 +271,21 @@
     <string name="file_list_title">Файлы</string>
     <plurals name="file_list_title_open_file">
         <item quantity="one">Выбрать файл</item>
-        <item quantity="few">Выбрать файлы</item>
-        <item quantity="many">Выбрать файлы</item>
         <item quantity="other">Выбрать файлы</item>
     </plurals>
     <string name="file_list_title_create_file">Сохранить файл</string>
     <plurals name="file_list_title_open_directory">
         <item quantity="one">Выбрать папку</item>
-        <item quantity="few">Выбрать папки</item>
-        <item quantity="many">Выбрать папки</item>
         <item quantity="other">Выбрать папки</item>
     </plurals>
     <plurals name="file_list_subtitle_directory_count_format">
         <item quantity="one">%1$,d папка</item>
         <item quantity="few">%1$,d папки</item>
-        <item quantity="many">%1$,d папок</item>
-        <item quantity="other">%1$,d папки</item>
+        <item quantity="other">%1$,d папок</item>
     </plurals>
     <plurals name="file_list_subtitle_file_count_format">
         <item quantity="one">%1$,d файл</item>
         <item quantity="few">%1$,d файла</item>
-        <item quantity="many">%1$,d файлов</item>
         <item quantity="other">%1$,d файлов</item>
     </plurals>
     <string name="file_list_subtitle_separator">,\u0020</string>
@@ -390,7 +340,6 @@
     <plurals name="file_properties_basic_contents_format">
         <item quantity="one">%1$,d элемент, размер %2$s</item>
         <item quantity="few">%1$,d элемента, суммарный размер %2$s</item>
-        <item quantity="many">%1$,d элементов, суммарный размер %2$s</item>
         <item quantity="other">%1$,d элементов, суммарный размер %2$s</item>
     </plurals>
     <string name="file_properties_basic_last_modification_time">Последнее изменение</string>
@@ -481,7 +430,6 @@
     <plurals name="file_properties_apk_requested_permissions_positive_format">
         <item quantity="one">Запрошено %1$,d разрешение</item>
         <item quantity="few">Запрошено %1$,d разрешения</item>
-        <item quantity="many">Запрошено %1$,d разрешений</item>
         <item quantity="other">Запрошено %1$,d разрешений</item>
     </plurals>
     <string name="file_properties_apk_signature_digests">Подписи</string>
@@ -691,6 +639,7 @@
     </string-array>
     <string name="settings_black_night_mode">Ночная тема</string>
     <string name="settings_file_list_animation_title">Анимация списка файлов</string>
+    <string name="settings_file_list_dense_layout_title">Плотность списка файлов</string>
     <string name="settings_file_name_ellipsize_title">Отображать длинные имена файлов</string>
     <string-array name="settings_file_name_ellipsize_entries">
         <item>Многоточие в начале</item>
@@ -737,4 +686,9 @@
     <string name="about_author_name_title">Hai Zhang</string>
     <string name="about_author_github_title">Подписаться на GitHub</string>
     <string name="about_author_twitter_title">Подписаться в Twitter</string>
+
+    <string name="word_warp">Перенос слов </string>
+    <string name="syntax_highlighting">Подсветка синтаксиса</string>
+    <string name="undo">Отменить</string>
+    <string name="redo">Повторить</string>
 </resources>
