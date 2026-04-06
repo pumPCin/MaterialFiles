@@ -9,7 +9,6 @@ import android.os.AsyncTask
 import android.os.Build
 import android.webkit.WebView
 import jcifs.context.SingletonContext
-import me.zhanghai.android.files.BuildConfig
 import me.zhanghai.android.files.coil.initializeCoil
 import me.zhanghai.android.files.filejob.fileJobNotificationTemplate
 import me.zhanghai.android.files.ftpserver.ftpServerServiceNotificationTemplate
@@ -30,7 +29,6 @@ import me.zhanghai.android.files.provider.smb.client.Client as SmbClient
 import me.zhanghai.android.files.provider.webdav.client.Client as WebDavClient
 
 val appInitializers = listOf(
-    ::initializeCrashlytics,
     ::disableHiddenApiChecks,
     ::initializeWebViewDebugging,
     ::initializeCoil,
@@ -42,20 +40,12 @@ val appInitializers = listOf(
     ::createNotificationChannels
 )
 
-private fun initializeCrashlytics() {
-//#ifdef NONFREE
-    me.zhanghai.android.files.nonfree.CrashlyticsInitializer.initialize()
-//#endif
-}
-
 private fun disableHiddenApiChecks() {
     HiddenApi.disableHiddenApiChecks()
 }
 
 private fun initializeWebViewDebugging() {
-    if (BuildConfig.DEBUG) {
-        WebView.setWebContentsDebuggingEnabled(true)
-    }
+    WebView.setWebContentsDebuggingEnabled(false)
 }
 
 private fun initializeFileSystemProviders() {
