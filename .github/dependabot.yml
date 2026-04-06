@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      maven:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "com.hierynomus:smbj"
+      - dependency-name: "com.rapid7.client:dcerpc"
+      - dependency-name: "de.psdev.licensesdialog:licensesdialog"
+      - dependency-name: "com.google.android.material:material"
