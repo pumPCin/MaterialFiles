@@ -189,7 +189,7 @@ dependencies {
     // This is a dependency of org.apache.ftpserver:ftpserver-core but org.apache.mina:mina-core
     // 2.1.4+ became incompatible before API 24 due to dependency on StandardSocketOptions
     // (DIRMINA-1123) and NetworkChannel.supportedOptions() (DIRMINA-1130).
-    implementation 'org.apache.mina:mina-core:2.2.5'
+    implementation 'org.apache.mina:mina-core:2.2.7'
     // Also a dependency of jCIFS-NG.
     implementation 'org.slf4j:slf4j-android:1.7.36'
 }
