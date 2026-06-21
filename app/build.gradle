@@ -117,7 +117,7 @@ dependencies {
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
     implementation 'androidx.exifinterface:exifinterface:1.4.2'
     implementation 'androidx.fragment:fragment-ktx:1.8.9'
-    def androidx_lifecycle_version = '2.10.0'
+    def androidx_lifecycle_version = '2.11.0'
     implementation "androidx.lifecycle:lifecycle-common-java8:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-process:$androidx_lifecycle_version"
@@ -189,7 +189,7 @@ dependencies {
     // This is a dependency of org.apache.ftpserver:ftpserver-core but org.apache.mina:mina-core
     // 2.1.4+ became incompatible before API 24 due to dependency on StandardSocketOptions
     // (DIRMINA-1123) and NetworkChannel.supportedOptions() (DIRMINA-1130).
-    implementation 'org.apache.mina:mina-core:2.2.8'
+    implementation 'org.apache.mina:mina-core:2.2.9'
     // Also a dependency of jCIFS-NG.
     implementation 'org.slf4j:slf4j-android:1.7.36'
 }
