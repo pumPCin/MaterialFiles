@@ -64,7 +64,7 @@ class EditBookmarkDirectoryDialogFragment : AppCompatDialogFragment() {
             .setNeutralButton(R.string.remove) { _, _ -> remove() }
             .create()
             .apply {
-                window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
+                window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
             }
 
     override fun onSaveInstanceState(outState: Bundle) {

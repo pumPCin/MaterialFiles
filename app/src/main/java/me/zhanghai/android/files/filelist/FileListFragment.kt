@@ -51,6 +51,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.leinardi.android.speeddial.SpeedDialView
 import java8.nio.file.Path
 import java8.nio.file.Paths
+import kotlin.math.roundToInt
 import kotlinx.parcelize.Parcelize
 import me.zhanghai.android.files.R
 import me.zhanghai.android.files.app.application
@@ -130,7 +131,6 @@ import me.zhanghai.android.files.util.valueCompat
 import me.zhanghai.android.files.util.viewModels
 import me.zhanghai.android.files.util.withChooser
 import me.zhanghai.android.files.viewer.image.ImageViewerActivity
-import kotlin.math.roundToInt
 
 class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.Listener,
     ConfirmReplaceFileDialogFragment.Listener, OpenApkDialogFragment.Listener,
@@ -221,7 +221,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
         val activity = requireActivity() as AppCompatActivity
         activity.setTitle(R.string.file_list_title)
         activity.setSupportActionBar(binding.toolbar)
-        overlayActionMode = OverlayToolbarActionMode(binding.overlayToolbar)
+        overlayActionMode = OverlayToolbarActionMode(binding.overlayToolbar, binding.toolbar)
         bottomActionMode = PersistentBarLayoutToolbarActionMode(
             binding.persistentBarLayout, binding.bottomBarLayout, binding.bottomToolbar
         )
@@ -362,7 +362,6 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
         }
         viewModel.pickOptionsLiveData.observe(viewLifecycleOwner) { onPickOptionsChanged(it) }
         viewModel.selectedFilesLiveData.observe(viewLifecycleOwner) { onSelectedFilesChanged(it) }
-        Settings.FILE_LIST_DENSE_LAYOUT.observe(viewLifecycleOwner) { onDenseLayoutChanged(it) }
         viewModel.pasteStateLiveData.observe(viewLifecycleOwner) { onPasteStateChanged(it) }
         Settings.FILE_NAME_ELLIPSIZE.observe(viewLifecycleOwner) { onFileNameEllipsizeChanged(it) }
         viewModel.fileListLiveData.observe(viewLifecycleOwner) { onFileListChanged(it) }
@@ -664,7 +663,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                     persistentDrawerLayout.isDrawerOpen(GravityCompat.START)) {
                     widthDp -= getDimensionDp(R.dimen.navigation_max_width).roundToInt()
                 }
-                (widthDp / 180).coerceAtLeast(if (adapter.denseLayout) 3 else 2 )
+                (widthDp / 180).coerceAtLeast(2)
             }
         }
     }
@@ -848,15 +847,6 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
         adapter.replaceSelectedFiles(files)
     }
 
-    private fun onDenseLayoutChanged(denseLayout: Boolean) {
-        adapter.denseLayout = denseLayout
-        updateSpanCount()
-        // re-set adapter to prevent RecyclerView from recycling views and reusing old padding
-        // values on refresh. Neither notifyDataSetChanged() / notifyItemRangeChanged
-        // nor adapter.refresh() does work here.
-        binding.recyclerView.adapter = adapter
-    }
-
     private fun updateOverlayToolbar() {
         val files = viewModel.selectedFiles
         if (files.isEmpty()) {
@@ -961,10 +951,6 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                 selectAllFiles()
                 true
             }
-            R.id.action_select_range -> {
-                rangeSelectFiles()
-                true
-            }
             else -> false
         }
 
@@ -1036,10 +1022,6 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
 
     private fun selectAllFiles() {
         adapter.selectAllFiles()
-    }
-
-    private fun rangeSelectFiles() {
-        adapter.rangeSelectFiles()
     }
 
     private fun onPasteStateChanged(pasteState: PasteState) {
@@ -1489,19 +1471,17 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                 ShowRequestAllFilesAccessRationaleDialogFragment.show(this)
                 viewModel.isStorageAccessRequested = true
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
-                PackageManager.PERMISSION_GRANTED
-            ) {
-                if (shouldShowRequestPermissionRationale(
-                        android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-                    )) {
-                    ShowRequestStoragePermissionRationaleDialogFragment.show(this)
-                } else {
-                    requestStoragePermission()
-                }
-                viewModel.isStorageAccessRequested = true
+        } else if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            if (shouldShowRequestPermissionRationale(
+                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )) {
+                ShowRequestStoragePermissionRationaleDialogFragment.show(this)
+            } else {
+                requestStoragePermission()
             }
+            viewModel.isStorageAccessRequested = true
         }
     }
 
