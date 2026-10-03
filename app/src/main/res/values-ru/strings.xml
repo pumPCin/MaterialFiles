@@ -9,7 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ImpliedQuantity">
 
-    <string name="app_name">Material Files</string>
+    <string name="app_name">Мои Файлы</string>
 
     <string name="close">Закрыть</string>
     <string name="copy">Копировать</string>
@@ -330,7 +330,7 @@
         <item quantity="one">%1$,d папка</item>
         <item quantity="few">%1$,d папки</item>
         <item quantity="many">%1$,d папок</item>
-        <item quantity="other">%1$,d папки</item>
+        <item quantity="other">%1$,d папок</item>
     </plurals>
     <plurals name="file_list_subtitle_file_count_format">
         <item quantity="one">%1$,d файл</item>
