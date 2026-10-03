@@ -2,37 +2,7 @@
 set -e
 
 LOCALES=(
-    ar
-    bg
-    ca
-    cs
-    da
-    de
-    el
-    es
-    eu
-    fa
-    fi
-    fr
-    gl
-    hu
-    in
-    is
-    it
-    iw
-    ja
-    ko
-    lt
-    nb
-    nl
-    pl
-    pt-rBR
-    pt-rPT
-    ro
     ru
-    tr
-    uk
-    vi
 )
 
 for zip_file in "$@"; do
